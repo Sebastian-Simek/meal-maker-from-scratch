@@ -2,9 +2,9 @@ import { renderIngredient } from './utils.js';
 
 const ingredientForm = document.getElementById('ingredients-added');
 const ingredientsList = document.getElementById('ingredient-list');
+const removeButton = document.getElementById('remove');
 
 let ingredientArray = [];
-console.log(ingredientArray);
 
 ingredientForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -27,9 +27,8 @@ function displayIngredients() {
         ingredientsList.appendChild(ingredientOutput);
     }
 } 
-// function renderIngredient(ingredient) {
-//     const li = document.createElement('li');
-//     li.textContent = `${ingredient.quantity} ${ingredient.unit} of ${ingredient.ingredients}`;
-//     console.log(li);
-//     return li;
-// }
+
+removeButton.addEventListener('click', () => {
+    ingredientArray.pop();
+    displayIngredients();
+});
