@@ -4,3 +4,10 @@ export function renderIngredient(ingredient) {
     ingredientList.textContent = `${ingredient.quantity} ${ingredient.unit} of ${ingredient.ingredients}`;
     return ingredientList;
 }
+
+export function renderMeal(booger) {
+    const mealList = document.createElement('li');
+    mealList.textContent = `${booger.name}-${booger.ingredients}`;
+    return mealList;
+}
+

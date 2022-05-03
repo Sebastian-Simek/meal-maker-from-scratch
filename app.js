@@ -1,10 +1,11 @@
-import { renderIngredient } from './utils.js';
+import { renderIngredient, renderMeal } from './utils.js';
 
 const ingredientForm = document.getElementById('ingredients-added');
 const ingredientsList = document.getElementById('ingredient-list');
 const removeButton = document.getElementById('remove');
 const saveButton = document.getElementById('save-meal');
 const mealName = document.getElementById('meal-name');
+const savedMealList = document.getElementById('saved-meal-list');
 
 let ingredientArray = [];
 let savedMealsArray = [];
@@ -36,14 +37,21 @@ removeButton.addEventListener('click', () => {
     displayIngredients();
 });
 
+function displayMeals() {
+    savedMealList.textContent = '';
+    for (let meal of savedMealsArray) {
+        const savedMealsOutput = renderMeal(meal);
+        savedMealList.appendChild(savedMealsOutput);
+        console.log(renderMeal);
+    }
+}
+
 saveButton.addEventListener('click', () => {
-    // for (let numOfIngredients of ingredientArray){
-    //     let ourIngredients = numOfIngredients.Ingredients;
-    //     console.log(ourIngredients);
-    
     let savedMeals = {
-        Name: mealName.value,
-        Ingredients: ingredientArray.length,
+        name: mealName.value,
+        ingredients: ingredientArray.length,
     };
-    console.log(savedMeals);
+    savedMealsArray.push(savedMeals);
+    displayMeals();
 });
+
