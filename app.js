@@ -15,3 +15,7 @@ ingredientForm.addEventListener('submit', (e) => {
     ingredientArray.push(mealIngredients);
     ingredientForm.reset();
 });
+
+function displayIngredients() {
+  
+} 
