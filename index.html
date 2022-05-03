@@ -14,22 +14,26 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
+        <p>This is my Header</p>
     </header>
     <main>
         <section class="top-buttons">
-            <p>Ingredients:</p>
+            <h3>Ingredients:</h3>
             <form id="ingredients-added">
-                <input type="text" name="ingredients-input" id="ingredients-input">
-                <input type="number" name="quantity" id="quantity">
-                <select name="measurement-type" id="measurement-type">
-                    <option value="cups">Cups</option>
-                    <option value="grams">Grams</option>
-                    <option value="pints">pints</option>
-                    <option value="liters">Liters</option>
-                </select>
+                <label> Ingredient
+                    <input type="text" name="ingredients-input" id="ingredients-input">
+                </label> Quantity
+                <label>
+                    <input type="number" name="quantity" id="quantity">
+                </label>
+                <label> Measurement
+                    <select name="measurement-type" id="measurement-type">
+                        <option value="cups">Cups</option>
+                        <option value="grams">Grams</option>
+                        <option value="pints">pints</option>
+                        <option value="liters">Liters</option>
+                    </select>
+                </label>
                 <button>Add Ingredient</button>
                 <div class="ingredients-list">
                     <ul id="ingredient-list"></ul>
