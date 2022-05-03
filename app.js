@@ -1,8 +1,17 @@
-// import functions and grab DOM elements
+const ingredientForm = document.getElementById('ingredients-added');
 
-// let state
+let ingredientArray = [];
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+ingredientForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const ingredientData = new FormData(ingredientForm);
+    
+    let mealIngredients = {
+        ingredients: ingredientData.get('ingredients-input'),
+        quantity: ingredientData.get('quantity'),
+        unit: ingredientData.get('measurement-type'),
+    };
+    ingredientArray.push(mealIngredients);
+    ingredientForm.reset();
+});
