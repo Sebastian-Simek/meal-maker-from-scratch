@@ -1,10 +1,10 @@
 import { renderIngredient } from './utils.js';
 
 const ingredientForm = document.getElementById('ingredients-added');
-const ingredientsList = document.getElementById('ingredients-list');
+const ingredientsList = document.getElementById('ingredient-list');
 
 let ingredientArray = [];
-
+console.log(ingredientArray);
 
 ingredientForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -22,9 +22,14 @@ ingredientForm.addEventListener('submit', (e) => {
 
 function displayIngredients() {
     ingredientsList.textContent = '';
-    for (let ingredient of ingredientArray) {
-        const ingredientList = renderIngredient(ingredient);
-        ingredientList.appendChild(ingredient);
+    for (let item of ingredientArray) {
+        const ingredientOutput = renderIngredient(item);
+        ingredientsList.appendChild(ingredientOutput);
     }
 } 
-console.log(renderIngredient);
+// function renderIngredient(ingredient) {
+//     const li = document.createElement('li');
+//     li.textContent = `${ingredient.quantity} ${ingredient.unit} of ${ingredient.ingredients}`;
+//     console.log(li);
+//     return li;
+// }
