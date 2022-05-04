@@ -32,3 +32,7 @@ section {
     margin: 10px;
     padding: 10px;
 }
+.top-buttons {
+    display: flex;
+    flex-direction: column;
+}

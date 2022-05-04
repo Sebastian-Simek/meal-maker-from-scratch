@@ -19,28 +19,30 @@
     <main>
         <section class="top-buttons">
             <h3>Ingredients:</h3>
-            <form id="ingredients-added">
-                <label> Ingredient
-                    <input type="text" name="ingredients-input" id="ingredients-input">
-                </label> Quantity
-                <label>
-                    <input type="number" name="quantity" id="quantity">
-                </label>
-                <label> Measurement
-                    <select name="measurement-type" id="measurement-type">
-                        <option value="cups">Cups</option>
-                        <option value="grams">Grams</option>
-                        <option value="pints">pints</option>
-                        <option value="liters">Liters</option>
-                    </select>
-                </label>
-                <button>Add Ingredient</button>
-                <div class="lists">
-                    <ul id="ingredient-list"></ul>
-                </div>
-            </form>
+                <form id="ingredients-added">
+                    <label> Ingredient
+                        <input type="text" name="ingredients-input" id="ingredients-input">
+                    </label> Quantity
+                    <label>
+                        <input type="number" name="quantity" id="quantity">
+                    </label>
+                    <label> Measurement
+                        <select name="measurement-type" id="measurement-type">
+                            <option value="cups">Cups</option>
+                            <option value="grams">Grams</option>
+                            <option value="pints">pints</option>
+                            <option value="liters">Liters</option>
+                        </select>
+                    </label>
+                    <label>
+                        <button>Add Ingredient</button>
+                    </label>    
+                    <div class="lists">
+                        <ul id="ingredient-list"></ul>
+                    </div>
+                </form>
             <div class="buttons">
-                <button id="remove">Remove Last Recipe</button>
+                <button id="remove">Remove Last Ingredient</button>
             </div>
         </section>
         <section class="bottom-buttons">
@@ -51,7 +53,7 @@
                 <button id="save-meal">Save Meal</button>
             </div>
             <div class="lists">
-                <ul id="saved-meal-list">Placeholder</ul>
+                <ul id="saved-meal-list"></ul>
             </div>
         </section>
     </main>

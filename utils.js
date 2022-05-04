@@ -7,7 +7,7 @@ export function renderIngredient(ingredient) {
 
 export function renderMeal(booger) {
     const mealList = document.createElement('li');
-    mealList.textContent = `${booger.name}-${booger.ingredients}`;
+    mealList.textContent = `${booger.name}-${booger.ingredients} ingredients`;
     return mealList;
 }
 

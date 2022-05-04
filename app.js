@@ -42,7 +42,6 @@ function displayMeals() {
     for (let meal of savedMealsArray) {
         const savedMealsOutput = renderMeal(meal);
         savedMealList.appendChild(savedMealsOutput);
-        console.log(renderMeal);
     }
 }
 
